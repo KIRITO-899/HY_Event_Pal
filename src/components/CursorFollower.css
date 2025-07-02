@@ -1,0 +1,57 @@
+/* Professional GSAP Cursor - Optimized for Dark Mode */
+.cursor-follower {
+  will-change: transform;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.cursor-dot {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Hide default cursor */
+* {
+  cursor: none !important;
+}
+
+/* Show cursor on form elements */
+input,
+textarea,
+select {
+  cursor: text !important;
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .cursor-follower,
+  .cursor-dot {
+    display: none !important;
+  }
+  
+  * {
+    cursor: auto !important;
+  }
+  
+  input,
+  textarea,
+  select {
+    cursor: text !important;
+  }
+}
+
+/* Dark mode cursor colors */
+[data-theme="dark"] .cursor-follower {
+  background-color: rgba(129, 140, 248, 0.1) !important;
+  border-color: #818cf8 !important;
+  box-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+}
+
+[data-theme="dark"] .cursor-dot {
+  background-color: #818cf8 !important;
+  box-shadow: 0 0 5px rgba(129, 140, 248, 0.5);
+}

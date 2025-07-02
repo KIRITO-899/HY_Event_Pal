@@ -1,0 +1,308 @@
+/* Import Enhanced Dark Theme */
+@import './themes/index.css';
+
+/* Light Theme (Default) */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f7fafc;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --text-tertiary: #718096;
+  --text-muted: #a0aec0;
+  --border-primary: #e2e8f0;
+  --border-secondary: #cbd5e0;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-heavy: rgba(0, 0, 0, 0.15);
+  --gradient-primary: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+  --gradient-secondary: linear-gradient(135deg, #45B7D1 0%, #96CEB4 100%);
+  --success-bg: #c6f6d5;
+  --success-text: #2d7d32;
+  --error-bg: #fed7d7;
+  --error-text: #c53030;
+  --warning-bg: #fef5e7;
+  --warning-text: #b7791f;
+  --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Legacy Dark Theme Variables (kept for compatibility) */
+/* Note: Enhanced dark theme is now loaded from ./themes/index.css */
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  box-shadow: 0 4px 6px var(--shadow-light);
+}
+
+.card:hover {
+  box-shadow: var(--card-hover-shadow);
+}
+
+/* Input and form elements */
+input,
+textarea,
+select {
+  background: var(--bg-primary) !important;
+  border-color: var(--border-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #FF6B6B !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Button styles */
+.btn-secondary {
+  background: var(--bg-tertiary) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-primary) !important;
+}
+
+.btn-secondary:hover {
+  background: var(--border-secondary) !important;
+}
+
+/* Text colors */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Header styles */
+.header {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.nav-link {
+  color: var(--text-secondary) !important;
+}
+
+.nav-link:hover {
+  color: var(--text-primary) !important;
+  background: var(--bg-tertiary) !important;
+}
+
+.nav-link.active {
+  color: #FF6B6B !important;
+  background: var(--bg-tertiary) !important;
+}
+
+/* Search and filter styles */
+.search-input {
+  background: var(--bg-primary) !important;
+  border-color: var(--border-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.filter-toggle {
+  background: var(--bg-primary) !important;
+  border-color: var(--border-primary) !important;
+  color: var(--text-secondary) !important;
+}
+
+.filters-panel {
+  background: var(--bg-primary) !important;
+  border-color: var(--border-primary) !important;
+}
+
+/* Category and action cards */
+.category-card,
+.action-card {
+  background: var(--bg-primary) !important;
+  border-color: var(--border-primary) !important;
+}
+
+.category-card h3,
+.action-card h4 {
+  color: var(--text-primary) !important;
+}
+
+.category-card p,
+.action-card p {
+  color: var(--text-tertiary) !important;
+}
+
+/* Profile styles */
+.profile-stats {
+  background: var(--bg-tertiary) !important;
+}
+
+.stat-card {
+  border-color: var(--border-primary) !important;
+}
+
+.tabs-nav {
+  background: var(--bg-tertiary) !important;
+  border-color: var(--border-primary) !important;
+}
+
+.tab-btn {
+  color: var(--text-tertiary) !important;
+}
+
+.tab-btn:hover {
+  background: var(--bg-secondary) !important;
+  color: var(--text-secondary) !important;
+}
+
+.tab-btn.active {
+  background: var(--bg-primary) !important;
+  color: #FF6B6B !important;
+}
+
+/* Loading and empty states */
+.loading,
+.empty-state {
+  color: var(--text-tertiary) !important;
+}
+
+.empty-icon {
+  color: var(--border-secondary) !important;
+}
+
+/* Event details specific styles */
+.organizer-info h4 {
+  color: var(--text-primary) !important;
+}
+
+.organizer-info p {
+  color: var(--text-tertiary) !important;
+}
+
+.location-info {
+  color: var(--text-secondary) !important;
+}
+
+.map-placeholder {
+  background: var(--bg-tertiary) !important;
+  border-color: var(--border-secondary) !important;
+  color: var(--text-tertiary) !important;
+}
+
+.quick-detail .label {
+  color: var(--text-tertiary) !important;
+}
+
+.quick-detail .value {
+  color: var(--text-primary) !important;
+}
+
+/* Form styles */
+.form-section h2 {
+  color: var(--text-primary) !important;
+}
+
+.form-group label {
+  color: var(--text-primary) !important;
+}
+
+.form-group small {
+  color: var(--text-tertiary) !important;
+}
+
+.character-count {
+  color: var(--text-tertiary) !important;
+}
+
+.event-preview {
+  background: var(--bg-tertiary) !important;
+  border-color: var(--border-primary) !important;
+}
+
+.preview-header h3 {
+  color: var(--text-primary) !important;
+}
+
+.preview-header p {
+  color: var(--text-secondary) !important;
+}
+
+.preview-detail {
+  color: var(--text-secondary) !important;
+}
+
+.form-actions {
+  background: var(--bg-tertiary) !important;
+}
+
+/* Success and error message styles */
+.success-message {
+  background: var(--success-bg) !important;
+  color: var(--success-text) !important;
+}
+
+.error-message {
+  background: var(--error-bg) !important;
+  color: var(--error-text) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  [data-theme="dark"] .nav {
+    background: var(--bg-primary);
+  }
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Override any conflicting transitions */
+.event-card,
+.category-card,
+.action-card,
+.btn {
+  transition: all 0.3s ease !important;
+}
+
+/* Dark theme specific animations */
+[data-theme="dark"] .hero-section {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+[data-theme="dark"] .cta-section {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+}
+
+/* Scrollbar styling for dark theme */
+[data-theme="dark"]::-webkit-scrollbar {
+  width: 8px;
+}
+
+[data-theme="dark"]::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"]::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+  border-radius: 4px;
+}
+
+[data-theme="dark"]::-webkit-scrollbar-thumb:hover {
+  background: var(--border-secondary);
+}

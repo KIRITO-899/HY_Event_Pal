@@ -1,0 +1,91 @@
+/**
+ * ==================================================
+ * APP.CSS - Main Application Styles
+ * ==================================================
+ * 
+ * Purpose: Core application layout and utility styles for the EventPal app
+ * Scope: Global layout containers, loading states, notifications
+ * Dependencies: None (base styles)
+ * 
+ * Contents:
+ * - Layout containers (.App, main)
+ * - Page transition animations (.fade-in)
+ * - Loading spinner components
+ * - Success/error message notifications
+ * - Core keyframe animations
+ */
+
+/* ===== LAYOUT CONTAINERS ===== */
+/* Main application container - ensures full viewport height coverage */
+.App {
+  min-height: 100vh; /* Full viewport height for proper page structure */
+}
+
+/* Main content area - accounts for fixed header height (80px) */
+main {
+  min-height: calc(100vh - 80px); /* Ensures content fills remaining space below header */
+}
+
+/* ===== PAGE TRANSITION ANIMATIONS ===== */
+/* Smooth fade-in animation for page transitions and content reveals */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out; /* Duration optimized for smooth UX */
+}
+
+/* Keyframe animation for gentle page entry effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;                    /* Start invisible */
+    transform: translateY(20px);   /* Start slightly below final position */
+  }
+  to {
+    opacity: 1;                    /* End fully visible */
+    transform: translateY(0);      /* End at natural position */
+  }
+}
+
+/* ===== LOADING STATES ===== */
+/* Centered loading container for async content */
+.loading {
+  display: flex;
+  justify-content: center;  /* Horizontal centering */
+  align-items: center;      /* Vertical centering */
+  height: 200px;            /* Adequate space for spinner and text */
+}
+
+/* Animated loading spinner with brand colors */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;      /* Light gray base ring */
+  border-top: 4px solid #667eea;  /* Brand blue accent for rotation visual */
+  border-radius: 50%;              /* Perfect circle */
+  animation: spin 1s linear infinite; /* Continuous smooth rotation */
+}
+
+/* Continuous rotation animation for spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }    /* Start position */
+  100% { transform: rotate(360deg); } /* Full rotation */
+}
+
+/* ===== NOTIFICATION MESSAGES ===== */
+/* Error message styling with red color scheme */
+.error-message {
+  background: #fed7d7;    /* Light red background */
+  color: #c53030;         /* Dark red text for contrast */
+  padding: 16px;          /* Adequate spacing for readability */
+  border-radius: 8px;     /* Rounded corners for modern appearance */
+  margin: 20px 0;         /* Vertical spacing from surrounding content */
+  text-align: center;     /* Centered text for prominence */
+}
+
+/* Success message styling with green color scheme */
+.success-message {
+  background: #c6f6d5;    /* Light green background */
+  color: #2d7d32;         /* Dark green text for contrast */
+  padding: 16px;          /* Consistent spacing with error messages */
+  border-radius: 8px;     /* Matching rounded corners */
+  margin: 20px 0;         /* Consistent vertical spacing */
+  text-align: center;     /* Centered text for prominence */
+}
